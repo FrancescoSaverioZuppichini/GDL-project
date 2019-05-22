@@ -6,13 +6,6 @@
 # ## Data loading
 # Let's get the dataset
 
-# In[15]:
-
-
-import os
-os.environ['CUDA_VISIBLE_DEVICES'] = "3"
-
-
 # In[1]:
 
 
@@ -34,7 +27,7 @@ test_ds = ModelNet(root='./',
 # In[19]:
 
 
-device = torch.device('cuda:2' if torch.cuda.is_available() else 'cpu')
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 device
 
 
