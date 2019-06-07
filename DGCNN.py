@@ -9,12 +9,6 @@
 # ## Data loading
 # Let's get the dataset
 
-# In[1]:
-
-
-get_ipython().run_line_magic('matplotlib', 'notebook')
-get_ipython().run_line_magic('load_ext', 'autoreload')
-get_ipython().run_line_magic('autoreload', '2')
 
 
 # In[2]:
@@ -241,7 +235,7 @@ run(50, train_dl, train=True)
 
 
 model = DGCNNClassification(3,10).to(device)
-model.load_state_dict(torch.load('./model-40-1558634785.3589494'))
+model.load_state_dict(torch.load(save_dir))
 model.eval()
 run(1, test_dl, train=False)
 
