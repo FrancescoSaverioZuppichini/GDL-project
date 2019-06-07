@@ -1,10 +1,13 @@
 \BOOKMARK [0][-]{section*.2}{Traversability Estimation for a Legged Robot with Dynamic Graph CNN}{}% 2
 \BOOKMARK [1][-]{section*.1}{Abstract}{section*.2}% 1
 \BOOKMARK [1][-]{section*.3}{Introduction}{section*.2}% 3
-\BOOKMARK [1][-]{section*.4}{Some LaTeX Examples}{section*.2}% 4
-\BOOKMARK [2][-]{section*.5}{Sections}{section*.4}% 5
-\BOOKMARK [2][-]{section*.6}{Tables and Figures}{section*.4}% 6
-\BOOKMARK [2][-]{section*.7}{Mathematics}{section*.4}% 7
-\BOOKMARK [2][-]{section*.8}{Lists}{section*.4}% 8
-\BOOKMARK [1][-]{section*.9}{Acknowledgments}{section*.2}% 9
-\BOOKMARK [1][-]{section*.10}{References}{section*.2}% 10
+\BOOKMARK [2][-]{section*.4}{Model}{section*.3}% 4
+\BOOKMARK [2][-]{section*.5}{Edge Convolution}{section*.3}% 5
+\BOOKMARK [2][-]{section*.6}{Dynamic Graph CNN}{section*.3}% 6
+\BOOKMARK [2][-]{section*.7}{Similarties to other architectures}{section*.3}% 7
+\BOOKMARK [1][-]{section*.8}{Experiment}{section*.2}% 8
+\BOOKMARK [2][-]{section*.9}{Dataset}{section*.8}% 9
+\BOOKMARK [2][-]{section*.10}{Traversability Estimation}{section*.8}% 10
+\BOOKMARK [1][-]{section*.11}{Results}{section*.2}% 11
+\BOOKMARK [1][-]{section*.12}{Conclusion}{section*.2}% 12
+\BOOKMARK [1][-]{section*.13}{References}{section*.2}% 13
