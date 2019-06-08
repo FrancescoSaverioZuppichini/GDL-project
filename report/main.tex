@@ -14,7 +14,7 @@
 
 \title{Traversability Estimation with Dynamic Graph CNN}
 \author{Francesco Saverio Zuppichini}
-\affiliation{Universita della Svizzera Italiana (USI), Lugano}
+\affiliation{Universita della Svizzera Italiana (USI) \\ \texttt{zuppif@usi.ch}}
 \begin{abstract}
   Recent deep learning breakthrough allows to effective classify and segment point clouds by converting them into graphs and feed them to \emph{Geometric Deep Learning} models. Point clouds are able to represent any shape in space making them one of the most versatile data-structure for non-euclidean data. The architecture that archives \emph{state of the art} results in booth classify and segment those cloud is Dynamic Graph CNN \cite{dgcnn}. It utilizes a special Convolution operator applied directly on the graph's edge called \emph{EdgeConv} using booth local and global information. The aim of this project is to first reproduce the results on the famous ModelNet40 \cite{shapenet} dataset with more than ten thousand meshed. Reproducing the paper's results ensure our architecture's correctness.
   Then, we test DGCNN against a vanilla CNN on a dataset composed by heightmaps, images where each pixel is the height value of a terrain region, labeled as traversable or not traversable. Those images were generated letting a legged crocodile-like robot, \emph{Krock}, walking into a simulated environment on synthetic maps and cropping the corresponding terrain patch around each stored trajectory pose. This dataset represents a really interesting playground to explore which architecture is able to extract the most information from the geometry of the terrain and correctly predict their traversability. 
