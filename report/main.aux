@@ -18,28 +18,56 @@
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \citation{dgcnn}
 \citation{shapenet}
+\citation{cnn}
 \citation{dgcnn}
 \citation{1812.08434}
 \citation{dgcnn}
 \citation{dgcnn}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{2}{section.1}}
-\newlabel{todopage:1}{{1}{2}{Introduction}{todo.1}{}}
-\newlabel{todopage:2}{{2}{2}{Introduction}{todo.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Model}{2}{subsection.1.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Dynamic Graph CNN}{2}{subsection.1.2}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.1}EdgeConv}{2}{subsubsection.1.2.1}}
+\citation{1706.02413}
+\newlabel{FirstPage}{{}{1}{}{section*.1}{}}
+\@writefile{toc}{\contentsline {title}{Traversability Estimation with Dynamic Graph CNN}{1}{section*.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {abstract}{Abstract}{1}{section*.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{section*.3}\protected@file@percent }
+\newlabel{todopage:1}{{1}{1}{}{todo.1}{}}
+\newlabel{todopage:2}{{2}{1}{}{todo.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A}Model}{1}{section*.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {B}Dynamic Graph CNN}{1}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1}EdgeConv}{1}{section*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2}Dynamic EdgeConv}{1}{section*.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {C}Similarties to other architectures}{1}{section*.8}\protected@file@percent }
+\citation{monet}
+\citation{ecc}
+\citation{gat}
+\citation{adam}
+\citation{xavier}
 \citation{shapenet}
-\citation{shapenet}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The two Dynamic Graph CNN architecture divided into upper and lower branch for classification and segmentation respectively, from the original paper \cite  {dgcnn}. In each edge conv, mlp$\{n_0, ..., n_{i}\}$ represents the number of output neurons of each dense layer. For example, in the first edge conv there are three dense layers with outputs size of $64$.}}{3}{figure.1}}
-\newlabel{fig : DGCNN}{{1}{3}{The two Dynamic Graph CNN architecture divided into upper and lower branch for classification and segmentation respectively, from the original paper \cite {dgcnn}. In each edge conv, mlp$\{n_0, ..., n_{i}\}$ represents the number of output neurons of each dense layer. For example, in the first edge conv there are three dense layers with outputs size of $64$}{figure.1}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.2}Dynamic EdgeConv}{3}{subsubsection.1.2.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Similarties to other architectures}{3}{subsection.1.3}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Experiments}{3}{section.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Setup}{3}{subsection.2.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Mesh Classification}{3}{subsection.2.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Some of the \emph  {chairs} CAD meshed in ModelNet40 \cite  {shapenet}.}}{3}{figure.2}}
-\newlabel{fig : modelnet}{{2}{3}{Some of the \emph {chairs} CAD meshed in ModelNet40 \cite {shapenet}}{figure.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Traversability Estimation}{3}{subsection.2.3}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Results}{3}{section.3}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Conclusion}{3}{section.4}}
-\bibdata{bib}
+\bibdata{mainNotes,bib}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The two Dynamic Graph CNN architectures divided into upper and lower branch for classification and segmentation respectively, image from the original paper \cite  {dgcnn}. In each edge conv, mlp$\{n_0, ..., n_{i}\}$ represents the number of output neurons of each dense layer. For example, in the first edge conv there are three dense layers with outputs size of $64$.}}{2}{figure.1}\protected@file@percent }
+\newlabel{fig : DGCNN}{{1}{2}{The two Dynamic Graph CNN architectures divided into upper and lower branch for classification and segmentation respectively, image from the original paper \cite {dgcnn}. In each edge conv, mlp$\{n_0, ..., n_{i}\}$ represents the number of output neurons of each dense layer. For example, in the first edge conv there are three dense layers with outputs size of $64$}{figure.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Experiments}{2}{section*.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A}Setup}{2}{section*.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {B}Mesh Classification}{2}{section*.11}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Some of the \emph  {chairs} CAD meshed in ModelNet40 \cite  {shapenet}.}}{2}{figure.2}\protected@file@percent }
+\newlabel{fig : modelnet}{{2}{2}{Some of the \emph {chairs} CAD meshed in ModelNet40 \cite {shapenet}}{figure.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C}Traversability Estimation}{2}{section*.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {III}Results}{2}{section*.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1}ModelNet40}{2}{section*.14}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Test accuracy score of the original DGCNN and ours implementation on the MonelNet40 dataset.}}{2}{table.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2}Traversability Estimation}{2}{section*.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Conclusion}{2}{section*.16}\protected@file@percent }
+\bibcite{dgcnn}{{1}{2018}{{Wang\ \emph  {et~al.}}}{{Wang, Sun, Liu, Sarma, Bronstein,\ and\ Solomon}}}
+\bibcite{shapenet}{{2}{2015}{{Wu\ \emph  {et~al.}}}{{Wu, Song, Khosla, Yu, Zhang, Tang,\ and\ Xiao}}}
+\bibcite{cnn}{{3}{1989}{{LeCun\ \emph  {et~al.}}}{{LeCun, Boser, Denker, Henderson, Howard, Hubbard,\ and\ Jackel}}}
+\bibcite{1812.08434}{{4}{2018}{{Zhou\ \emph  {et~al.}}}{{Zhou, Cui, Zhang, Yang, Liu, Wang, Li,\ and\ Sun}}}
+\bibcite{1706.02413}{{5}{2017}{{Qi\ \emph  {et~al.}}}{{Qi, Yi, Su,\ and\ Guibas}}}
+\bibcite{monet}{{6}{2017}{{F.Monti\ \emph  {et~al.}}}{{F.Monti, D.Boscaini, J.Masci, E.Rodola, oda,\ and\ Bronstein}}}
+\bibcite{ecc}{{7}{2017}{{Simonovsky\ and\ Komodakis}}{{}}}
+\bibcite{gat}{{8}{2017}{{Velickovic\ \emph  {et~al.}}}{{Velickovic, Cucurull, Casanova, Romero, Lio, ,\ and\ Bengio}}}
+\bibcite{adam}{{9}{2014}{{Kingma\ and\ Ba}}{{}}}
+\bibcite{xavier}{{10}{2006}{{the difficulty of training deep feedforward~neural networks}}{{}}}
+\bibstyle{apsrev4-1}
+\citation{REVTEX41Control}
+\citation{apsrev41Control}
+\@writefile{toc}{\contentsline {section}{\numberline {}References}{3}{section*.17}\protected@file@percent }
+\newlabel{LastBibItem}{{10}{3}{}{section*.17}{}}
+\newlabel{LastPage}{{}{3}{}{}{}}

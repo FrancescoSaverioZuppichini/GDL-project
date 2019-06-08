@@ -1,0 +1,166 @@
+%merlin.mbs apsrev4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
+%Control: key (0)
+%Control: author (8) initials jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (-1) disabled
+%Control: page (0) single
+%Control: year (1) truncated
+%Control: production of eprint (0) enabled
+\begin{thebibliography}{10}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
+  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{http://dx.doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Wang}\ \emph {et~al.}(2018)\citenamefont {Wang},
+  \citenamefont {Sun}, \citenamefont {Liu}, \citenamefont {Sarma},
+  \citenamefont {Bronstein},\ and\ \citenamefont {Solomon}}]{dgcnn}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+  {Wang}}, \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Sun}}, \bibinfo
+  {author} {\bibfnamefont {Z.}~\bibnamefont {Liu}}, \bibinfo {author}
+  {\bibfnamefont {S.~E.}\ \bibnamefont {Sarma}}, \bibinfo {author}
+  {\bibfnamefont {M.~M.}\ \bibnamefont {Bronstein}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {J.~M.}\ \bibnamefont {Solomon}},\ }\href@noop {} {\enquote
+  {\bibinfo {title} {Dynamic graph cnn for learning on point clouds},}\ }
+  (\bibinfo {year} {2018}),\ \Eprint {http://arxiv.org/abs/arXiv:1801.07829}
+  {arXiv:1801.07829} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Wu}\ \emph {et~al.}(2015)\citenamefont {Wu},
+  \citenamefont {Song}, \citenamefont {Khosla}, \citenamefont {Yu},
+  \citenamefont {Zhang}, \citenamefont {Tang},\ and\ \citenamefont
+  {Xiao}}]{shapenet}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont
+  {Wu}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Song}}, \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {Khosla}}, \bibinfo {author}
+  {\bibfnamefont {F.}~\bibnamefont {Yu}}, \bibinfo {author} {\bibfnamefont
+  {L.}~\bibnamefont {Zhang}}, \bibinfo {author} {\bibfnamefont
+  {X.}~\bibnamefont {Tang}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {J.}~\bibnamefont {Xiao}},\ }\href@noop {} {\enquote {\bibinfo {title} {3d
+  shapenets: A deep representation for volumetric shapes},}\ } (\bibinfo {year}
+  {2015})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {LeCun}\ \emph {et~al.}(1989)\citenamefont {LeCun},
+  \citenamefont {Boser}, \citenamefont {Denker}, \citenamefont {Henderson},
+  \citenamefont {Howard}, \citenamefont {Hubbard},\ and\ \citenamefont
+  {Jackel}}]{cnn}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+  {LeCun}}, \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Boser}},
+  \bibinfo {author} {\bibfnamefont {J.~S.}\ \bibnamefont {Denker}}, \bibinfo
+  {author} {\bibfnamefont {D.}~\bibnamefont {Henderson}}, \bibinfo {author}
+  {\bibfnamefont {R.~E.}\ \bibnamefont {Howard}}, \bibinfo {author}
+  {\bibfnamefont {W.}~\bibnamefont {Hubbard}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {L.~D.}\ \bibnamefont {Jackel}},\ }\href@noop {} {\  (\bibinfo
+  {year} {1989})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Zhou}\ \emph {et~al.}(2018)\citenamefont {Zhou},
+  \citenamefont {Cui}, \citenamefont {Zhang}, \citenamefont {Yang},
+  \citenamefont {Liu}, \citenamefont {Wang}, \citenamefont {Li},\ and\
+  \citenamefont {Sun}}]{1812.08434}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Zhou}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Cui}}, \bibinfo
+  {author} {\bibfnamefont {Z.}~\bibnamefont {Zhang}}, \bibinfo {author}
+  {\bibfnamefont {C.}~\bibnamefont {Yang}}, \bibinfo {author} {\bibfnamefont
+  {Z.}~\bibnamefont {Liu}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Wang}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Li}}, \ and\
+  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Sun}},\ }\href@noop {}
+  {\enquote {\bibinfo {title} {Graph neural networks: A review of methods and
+  applications},}\ } (\bibinfo {year} {2018}),\ \Eprint
+  {http://arxiv.org/abs/arXiv:1812.08434} {arXiv:1812.08434} \BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Qi}\ \emph {et~al.}(2017)\citenamefont {Qi},
+  \citenamefont {Yi}, \citenamefont {Su},\ and\ \citenamefont
+  {Guibas}}]{1706.02413}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~R.}\ \bibnamefont
+  {Qi}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Yi}}, \bibinfo
+  {author} {\bibfnamefont {H.}~\bibnamefont {Su}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {L.~J.}\ \bibnamefont {Guibas}},\ }\href@noop {} {\enquote
+  {\bibinfo {title} {Pointnet++: Deep hierarchical feature learning on point
+  sets in a metric space},}\ } (\bibinfo {year} {2017}),\ \Eprint
+  {http://arxiv.org/abs/arXiv:1706.02413} {arXiv:1706.02413} \BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {F.Monti}\ \emph {et~al.}(2017)\citenamefont
+  {F.Monti}, \citenamefont {D.Boscaini}, \citenamefont {J.Masci}, \citenamefont
+  {E.Rodola}, \citenamefont {oda},\ and\ \citenamefont {Bronstein}}]{monet}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {F.Monti}}, \bibinfo
+  {author} {\bibnamefont {D.Boscaini}}, \bibinfo {author} {\bibnamefont
+  {J.Masci}}, \bibinfo {author} {\bibnamefont {E.Rodola}}, \bibinfo {author}
+  {\bibfnamefont {J.}~\bibnamefont {oda}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {M.~M.}\ \bibnamefont {Bronstein}},\ }\href@noop {} {\
+  (\bibinfo {year} {2017})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Simonovsky}\ and\ \citenamefont
+  {Komodakis}(2017)}]{ecc}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Simonovsky}}\ and\ \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Komodakis}},\ }\href@noop {} {\  (\bibinfo {year} {2017})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Velickovic}\ \emph {et~al.}(2017)\citenamefont
+  {Velickovic}, \citenamefont {Cucurull}, \citenamefont {Casanova},
+  \citenamefont {Romero}, \citenamefont {Lio}, ,\ and\ \citenamefont
+  {Bengio}}]{gat}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Velickovic}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Cucurull}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Casanova}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Romero}}, \bibinfo
+  {author} {\bibfnamefont {P.}~\bibnamefont {Lio}}, , \ and\ \bibinfo {author}
+  {\bibfnamefont {Y.}~\bibnamefont {Bengio}},\ }\href@noop {} {\  (\bibinfo
+  {year} {2017})},\ \Eprint {http://arxiv.org/abs/arXiv:1710.10903}
+  {arXiv:1710.10903} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kingma}\ and\ \citenamefont {Ba}(2014)}]{adam}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~P.}\ \bibnamefont
+  {Kingma}}\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Ba}},\
+  }\href@noop {} {\enquote {\bibinfo {title} {Adam: A method for stochastic
+  optimization},}\ } (\bibinfo {year} {2014}),\ \Eprint
+  {http://arxiv.org/abs/arXiv:1412.6980} {arXiv:1412.6980} \BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {the difficulty of training deep feedforward~neural
+  networks}(2006)}]{xavier}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {U.}~\bibnamefont {the
+  difficulty of training deep feedforward~neural networks}},\ }\href@noop {}
+  {\enquote {\bibinfo {title} {Xavier glorot and yoshua bengio},}\ } (\bibinfo
+  {year} {2006})\BibitemShut {NoStop}%
+\end{thebibliography}%
