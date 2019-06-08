@@ -6,27 +6,55 @@
 \usepackage{graphicx}
 \usepackage{dcolumn}
 \usepackage{hyperref}
-
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage{todo}
 \begin{document}
 
-\title{Traversability Estimation for a Legged Robot with Dynamic Graph CNN}
+\title{Traversability Estimation with Dynamic Graph CNN}
 \author{Francesco Saverio Zuppichini}
 \affiliation{Universita della Svizzera Italiana (USI), Lugano}
 \begin{abstract}
-  Point clouds are one of the most versatile 3d data representation. Those clouds can be converted into graphs where each point is connected to the neighbors making it possible to
-  apply Graph Deep Learning methods. Usually, we are interested in classifying, label each cloud, or segment, label each point. The architecture that archives \emph{state of the art} results in booth tasks is Dynamic Graph CNN \cite{dgcnn}. It utilizes a special Convolution operator applied directly on the graph's edge called \emph{EdgeConv} using booth local and global information. The aim of this project is to first reproduce the results on the famous ModelNet40 \cite{shapenet} dataset with more than ten thousand meshed. Reproducing the paper's results ensure our architecture's correctness.
+  Recent deep learning breakthrough have allowed to effective classify and segment point clouds by convert them into graph and feed them to \emph{Geometric Deep Learning} models. Point clouds are able to represent any shape in space making them one of the most versatile data-structure for non-euclidean dataset. The architecture that archives \emph{state of the art} results in booth classify and segment those cloud is Dynamic Graph CNN \cite{dgcnn}. It utilizes a special Convolution operator applied directly on the graph's edge called \emph{EdgeConv} using booth local and global information. The aim of this project is to first reproduce the results on the famous ModelNet40 \cite{shapenet} dataset with more than ten thousand meshed. Reproducing the paper's results ensure our architecture's correctness.
   Then, we test DGCNN against a vanilla CNN on a dataset composed by heightmaps, images where each pixel is the height value of a terrain region, labeled as traversable or not traversable. Those images were generated letting a legged crocodile-like robot, \emph{Krock}, walking into a simulated environment on synthetic maps and cropping the corresponding terrain patch around each stored trajectory pose. This dataset represents a really interesting playground to explore with architecture is able to extract the most information from the geometry of the terrain and correctly predict their traversability. 
 \end{abstract}
 \maketitle
 \section{Introduction}
-In the last years, Geometric Deep Learning methods have flourished and successfully been applied to point cloud-related tasks such as classification and segmentation. One of these successfully architecture is \emph{Dynamic Graph CNN} proposed by Wang et all \cite{dgcnn}, it utilizes a special convolution layer, called \emph{EdgeConv}, to classify or segment point clouds. With this project, we aim to reproduce the results of the original paper on the classification task and to test its effectiveness on predicting traversability estimation using ground's patches for a legged robot by comparing it to a classic CNN approach.  
+
+Graphs can express a wide array of data structures using a set of nodes and the relationship between them, edges. Graphs are non-euclidean data, thus standard deep learning methods, like CNN, fails. Recently, a new set of machine learning models, \emph{Graph Deep Learning} have flourished and successfully applied on a wide array of graphs structure such as social networks \todo{add cite}, proteins \todo{add cite}, and on point clouds. A Point cloud is a set of data points in space that often represents a specific 3D object by defined its points coordinates. They are extremely flexible and can be easily gather using consumer hardware such as a Kinect or a Lidar. Even if they are not graphs by definition, we can easily convert them connecting to each point $k$ neighbors.
+
+As with images, we are interested in classify of segment those point clouds. The current architecture that achieves the \emph{state of the art} in those tasks is \emph{Dynamic Graph CNN} proposed by Wang et all \cite{dgcnn}. It utilizes a special convolution layer,  \emph{EdgeConv}, to classify or segment point clouds. 
+
+This this project will focus on explain, test and evaluate this architecture. First, we will reproduce the results of the original paper on the classification task. Then to test its effectiveness on predicting traversability estimation using ground's patches for a legged robot by comparing it to a classic CNN approach. The discussion will only scrape the surface of the topic and will not treat in detail other architectures. If interested, we suggest to the reader the review by Zhou et all \cite{1812.08434}.
 \subsection{Model}
-In this section we summarized the original paper's architecture, starting by the barebone of DGCNN, the \emph{EdgeConv}.
-\subsection{Edge Convolution}
+In this section we summarized the original paper's architecture, starting by the backbone of DGCNN, the \emph{EdgeConv}.
 \subsection{Dynamic Graph CNN}
+Dynamic Graph CNN is composed by multiple layer of \emph{EdgeConv} stacked one after the other similar to how Convolution are integrated into CNN. Figure \ref{fig : DGCNN} shows the two architecture proposed by the Authors, for classification and segmentation. 
+\begin{figure*}
+  \centering
+  \includegraphics[width=\linewidth]{images/DGCNN.png}
+\caption{The two Dynamic Graph CNN architecture diveded into upper and lower branch for classification and segmentation respectively.}
+\label{fig : DGCNN}
+\end{figure*}
+
+Given a point cloud with $n$ denoded as $X=\left\{x_{1}, \ldots, x_{n}\right\} \subseteq R^{F}$ and a graph $\mathcal{G}=(\mathcal{V}, \mathcal{E})$ representing the local structure of the cloud, the output of \emph{EdgeConv} operation is defined as
+\begin{equation}
+  x_{i}^{\prime}=\square_{j :(i, j) \in \mathcal{E}} h_{\Theta}\left(x_{i}, x_{j}\right)
+  \end{equation}
+
 \subsection{Similarties to other architectures}
-\section{Experiment}
-\subsection{Dataset}
+
+\section{Experiments}
+\subsection{Setup}
+\subsection{Mesh Classification}
+Exactly as in the original paper, we tested the model's score on the \emph{ModelNet40} dataset, a collection of more than ten thousand CAD meshed. The samples are divided into $9,843$ for training $2,468$ for testing with 40 categories. Figure \ref{fig : modelnet} shows some of the meshed for the category \emph{chair}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{images/ModelNet.jpg}
+\caption{Some of the \emph{chairs} CAD meshed in ModelNet40 \cite{shapenet}.}
+\label{fig : modelnet}
+\end{figure}
 \subsection{Traversability Estimation}
 \section{Results}
 
