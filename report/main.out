@@ -3,15 +3,15 @@
 \BOOKMARK [1][-]{section*.3}{Introduction}{section*.2}% 3
 \BOOKMARK [2][-]{section*.4}{Model}{section*.3}% 4
 \BOOKMARK [2][-]{section*.5}{Dynamic Graph CNN}{section*.3}% 5
-\BOOKMARK [3][-]{section*.6}{EdgeConv}{section*.5}% 6
-\BOOKMARK [3][-]{section*.7}{Dynamic EdgeConv}{section*.5}% 7
-\BOOKMARK [2][-]{section*.8}{Similarties to other architectures}{section*.3}% 8
-\BOOKMARK [1][-]{section*.9}{Experiments}{section*.2}% 9
-\BOOKMARK [2][-]{section*.10}{Setup}{section*.9}% 10
-\BOOKMARK [2][-]{section*.11}{Mesh Classification}{section*.9}% 11
-\BOOKMARK [2][-]{section*.12}{Traversability Estimation}{section*.9}% 12
-\BOOKMARK [1][-]{section*.13}{Results}{section*.2}% 13
-\BOOKMARK [2][-]{section*.14}{ModelNet40}{section*.13}% 14
-\BOOKMARK [3][-]{section*.15}{Traversability Estimation}{section*.14}% 15
-\BOOKMARK [1][-]{section*.16}{Conclusion}{section*.2}% 16
-\BOOKMARK [1][-]{section*.17}{References}{section*.2}% 17
+\BOOKMARK [3][-]{section*.7}{EdgeConv}{section*.5}% 6
+\BOOKMARK [3][-]{section*.8}{Dynamic EdgeConv}{section*.5}% 7
+\BOOKMARK [2][-]{section*.9}{Similarties to other architectures}{section*.3}% 8
+\BOOKMARK [1][-]{section*.10}{Experiments}{section*.2}% 9
+\BOOKMARK [2][-]{section*.11}{Setup}{section*.10}% 10
+\BOOKMARK [2][-]{section*.12}{Mesh Classification}{section*.10}% 11
+\BOOKMARK [2][-]{section*.14}{Traversability Estimation}{section*.10}% 12
+\BOOKMARK [1][-]{section*.17}{Results}{section*.2}% 13
+\BOOKMARK [2][-]{section*.18}{ModelNet40}{section*.17}% 14
+\BOOKMARK [3][-]{section*.20}{Traversability Estimation}{section*.18}% 15
+\BOOKMARK [1][-]{section*.21}{Conclusion}{section*.2}% 16
+\BOOKMARK [1][-]{section*.22}{References}{section*.2}% 17

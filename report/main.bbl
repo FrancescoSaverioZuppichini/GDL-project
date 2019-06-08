@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{10}%
+\begin{thebibliography}{12}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -163,4 +163,24 @@
   difficulty of training deep feedforward~neural networks}},\ }\href@noop {}
   {\enquote {\bibinfo {title} {Xavier glorot and yoshua bengio},}\ } (\bibinfo
   {year} {2006})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ioffe}\ and\ \citenamefont
+  {Szegedy}(2015)}]{ioffe2015batch}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Ioffe}}\ and\ \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Szegedy}},\ }\href@noop {} {\enquote {\bibinfo {title} {Batch normalization:
+  Accelerating deep network training by reducing internal covariate shift},}\ }
+  (\bibinfo {year} {2015}),\ \Eprint {http://arxiv.org/abs/arXiv:1502.03167}
+  {arXiv:1502.03167} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Chavez-Garcia}\ \emph {et~al.}(2017)\citenamefont
+  {Chavez-Garcia}, \citenamefont {Guzzi}, \citenamefont {Gambardella},\ and\
+  \citenamefont {Giusti}}]{omar}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~O.}\ \bibnamefont
+  {Chavez-Garcia}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Guzzi}}, \bibinfo {author} {\bibfnamefont {L.~M.}\ \bibnamefont
+  {Gambardella}}, \ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Giusti}},\ }\href@noop {} {\enquote {\bibinfo {title} {Learning ground
+  traversability from simulations},}\ } (\bibinfo {year} {2017})\BibitemShut
+  {NoStop}%
 \end{thebibliography}%
