@@ -1,7 +1,6 @@
-\documentclass[twocolumn,showpacs,%
-  nofootinbib,aps,superscriptaddress,%
-  eqsecnum,prd,notitlepage,showkeys,10pt]{revtex4-1}
-\usepackage{amssymb}
+\documentclass[twocolumn,showpacs,
+  nofootinbib,aps,superscriptaddress,
+  eqsecnum,prd,notitlepage,showkeys,10pt]{article}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{dcolumn}
@@ -13,11 +12,12 @@
 
 \title{Traversability Estimation with Dynamic Graph CNN}
 \author{Francesco Saverio Zuppichini}
-\affiliation{Universita della Svizzera Italiana (USI), Lugano}
+% \affiliation{Universita della Svizzera Italiana (USI), Lugano}
 \begin{abstract}
   Recent deep learning breakthrough have allowed to effective classify and segment point clouds by convert them into graph and feed them to \emph{Geometric Deep Learning} models. Point clouds are able to represent any shape in space making them one of the most versatile data-structure for non-euclidean dataset. The architecture that archives \emph{state of the art} results in booth classify and segment those cloud is Dynamic Graph CNN \cite{dgcnn}. It utilizes a special Convolution operator applied directly on the graph's edge called \emph{EdgeConv} using booth local and global information. The aim of this project is to first reproduce the results on the famous ModelNet40 \cite{shapenet} dataset with more than ten thousand meshed. Reproducing the paper's results ensure our architecture's correctness.
-  Then, we test DGCNN against a vanilla CNN on a dataset composed by heightmaps, images where each pixel is the height value of a terrain region, labeled as traversable or not traversable. Those images were generated letting a legged crocodile-like robot, \emph{Krock}, walking into a simulated environment on synthetic maps and cropping the corresponding terrain patch around each stored trajectory pose. This dataset represents a really interesting playground to explore with architecture is able to extract the most information from the geometry of the terrain and correctly predict their traversability. 
-\end{abstract}
+  Then, we test DGCNN against a vanilla CNN on a dataset composed by heightmaps, images where each pixel is the height value of a terrain region, labeled as traversable or not traversable. Those images were generated letting a legged crocodile-like robot, \emph{Krock}, walking into a simulated environment on synthetic maps and cropping the corresponding terrain patch around each stored trajectory pose. This dataset represents
+   a really interesting playground to explore with architecture is able to extract the most information from the geometry of the terrain and correctly predict their traversability. 
+\end{abstract}s
 \maketitle
 \section{Introduction}
 
@@ -33,16 +33,28 @@ Dynamic Graph CNN is composed by multiple layer of \emph{EdgeConv} stacked one a
 \begin{figure*}
   \centering
   \includegraphics[width=\linewidth]{images/DGCNN.png}
-\caption{The two Dynamic Graph CNN architecture diveded into upper and lower branch for classification and segmentation respectively.}
+\caption{The two Dynamic Graph CNN architecture divided into upper and lower branch for classification and segmentation respectively, from the original paper \cite{dgcnn}. In each edge conv, mlp$\{n_0, ..., n_{i}\}$ represents the number of output neurons of each dense layer. For example, in the first edge conv there are three dense layers with outputs size of $64$.}
 \label{fig : DGCNN}
 \end{figure*}
-
-Given a point cloud with $n$ denoded as $X=\left\{x_{1}, \ldots, x_{n}\right\} \subseteq R^{F}$ and a graph $\mathcal{G}=(\mathcal{V}, \mathcal{E})$ representing the local structure of the cloud, the output of \emph{EdgeConv} operation is defined as
+\subsubsection{EdgeConv}
+Given a point cloud with $n$ denoded as $X=\left\{x_{1}, \ldots, x_{n}\right\} \subseteq R^{F}$ and a graph $\mathcal{G}=(\mathcal{V}, \mathcal{E})$ representing the local structure of the cloud, the $i$-th output of \emph{EdgeConv} operation is defined as
 \begin{equation}
   x_{i}^{\prime}=\square_{j :(i, j) \in \mathcal{E}} h_{\Theta}\left(x_{i}, x_{j}\right)
   \end{equation}
-
+Where $\square$ is a channel wise aggregation function and $h_{\Theta}$ is the edge function. The authors choose $\square=max$ and $h_{\Theta} = h_{\Theta}(x_i, x_j - x_i)$. Where $x_i$ and $x_j$ are the coordinates of the center of the patch and its neighbors respectively. Intuitivelly, this allows the layer to use booth global and local information about the mesh. In addition, the edge function has a learnable parameter $\Theta$ that is a classic feed-forward neural network. 
+\subsubsection{Dynamic EdgeConv}
 \subsection{Similarties to other architectures}
+% Interesting if we take an image and we convert into a graph where each node has the pixel value and there is a local connectivity between them. Then the EdgeConv becomes the classic convolution:
+
+% \begin{equation}
+%   x_{i}^{\prime}=\sum_{j :(i, j) \in \mathcal{E}} \theta_{j} x_{j}
+%   \end{equation}
+
+The authors shown that DGCNN is related to booth two categories of approaches: PointNet and graph CNN.
+First, PointNet is just a special case of DGCNN where $k=1$ resulting in an empty graphs where the edge convolution functions utilises only the global information of each patch, $h_{\Theta} = h_{\Theta}(x_i)$
+
+While, the commmon denominator with graph CNN methods, MoNet, ECC and Graph Attention Network and DGCNN is the notion of local patch. Hovewer, one crucial different is that all previous models work on a \emph{static} graph.
+
 
 \section{Experiments}
 \subsection{Setup}

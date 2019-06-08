@@ -1,13 +1,12 @@
-\BOOKMARK [0][-]{section*.2}{Traversability Estimation with Dynamic Graph CNN}{}% 2
-\BOOKMARK [1][-]{section*.1}{Abstract}{section*.2}% 1
-\BOOKMARK [1][-]{section*.3}{Introduction}{section*.2}% 3
-\BOOKMARK [2][-]{section*.4}{Model}{section*.3}% 4
-\BOOKMARK [2][-]{section*.5}{Dynamic Graph CNN}{section*.3}% 5
-\BOOKMARK [2][-]{section*.6}{Similarties to other architectures}{section*.3}% 6
-\BOOKMARK [1][-]{section*.7}{Experiments}{section*.2}% 7
-\BOOKMARK [2][-]{section*.8}{Setup}{section*.7}% 8
-\BOOKMARK [2][-]{section*.9}{Mesh Classification}{section*.7}% 9
-\BOOKMARK [2][-]{section*.10}{Traversability Estimation}{section*.7}% 10
-\BOOKMARK [1][-]{section*.11}{Results}{section*.2}% 11
-\BOOKMARK [1][-]{section*.12}{Conclusion}{section*.2}% 12
-\BOOKMARK [1][-]{section*.13}{References}{section*.2}% 13
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Model}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Dynamic Graph CNN}{section.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.2.1}{EdgeConv}{subsection.1.2}% 4
+\BOOKMARK [3][-]{subsubsection.1.2.2}{Dynamic EdgeConv}{subsection.1.2}% 5
+\BOOKMARK [2][-]{subsection.1.3}{Similarties to other architectures}{section.1}% 6
+\BOOKMARK [1][-]{section.2}{Experiments}{}% 7
+\BOOKMARK [2][-]{subsection.2.1}{Setup}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.2}{Mesh Classification}{section.2}% 9
+\BOOKMARK [2][-]{subsection.2.3}{Traversability Estimation}{section.2}% 10
+\BOOKMARK [1][-]{section.3}{Results}{}% 11
+\BOOKMARK [1][-]{section.4}{Conclusion}{}% 12
