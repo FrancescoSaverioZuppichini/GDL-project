@@ -29,45 +29,45 @@ Warning--missing journal in cnn
 Warning--missing journal in monet
 Warning--missing journal in ecc
 Warning--missing journal in gat
-You've used 16 entries,
+You've used 17 entries,
             5847 wiz_defined-function locations,
-            1658 strings with 16744 characters,
-and the built_in function-call counts, 15043 in all, are:
-= -- 777
-> -- 529
-< -- 116
-+ -- 167
-- -- 151
-* -- 2581
-:= -- 1431
-add.period$ -- 24
-call.type$ -- 16
-change.case$ -- 66
-chr.to.int$ -- 24
-cite$ -- 20
-duplicate$ -- 1429
-empty$ -- 997
-format.name$ -- 310
-if$ -- 2836
+            1663 strings with 16919 characters,
+and the built_in function-call counts, 15831 in all, are:
+= -- 822
+> -- 548
+< -- 121
++ -- 173
+- -- 155
+* -- 2692
+:= -- 1511
+add.period$ -- 25
+call.type$ -- 17
+change.case$ -- 70
+chr.to.int$ -- 25
+cite$ -- 21
+duplicate$ -- 1512
+empty$ -- 1064
+format.name$ -- 323
+if$ -- 2989
 int.to.chr$ -- 1
-int.to.str$ -- 23
-missing$ -- 162
-newline$ -- 94
-num.names$ -- 42
-pop$ -- 621
+int.to.str$ -- 24
+missing$ -- 173
+newline$ -- 97
+num.names$ -- 45
+pop$ -- 663
 preamble$ -- 1
-purify$ -- 70
+purify$ -- 75
 quote$ -- 0
-skip$ -- 473
+skip$ -- 499
 stack$ -- 0
-substring$ -- 202
-swap$ -- 1382
-text.length$ -- 61
+substring$ -- 215
+swap$ -- 1449
+text.length$ -- 63
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 232
+type$ -- 245
 warning$ -- 5
-while$ -- 37
+while$ -- 39
 width$ -- 0
-write$ -- 153
+write$ -- 159
 (There were 6 warnings)

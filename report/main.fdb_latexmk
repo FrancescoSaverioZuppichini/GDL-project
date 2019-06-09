@@ -1,14 +1,15 @@
 # Fdb version 3
-["bibtex main"] 1560084671 "main.aux" "main.bbl" "main" 1560084902
+["bibtex main"] 1560087523 "main.aux" "main.bbl" "main" 1560087551
   "/usr/local/texlive/2019/texmf-dist/bibtex/bst/revtex/apsrev4-1.bst" 1547851249 71518 fec93f06df0c073f83d2330456bd19c2 ""
-  "main.aux" 1560084901 7117 bdbcb9e946664a0504dd7db93932aa63 "pdflatex"
-  "mainNotes.bib" 1560084901 103 48ad29797468f16e2853d8797278d7af "pdflatex"
+  "bib.bib" 1560085599 3499 3ef1054cc0e2158fb3c8143059f73e69 ""
+  "main.aux" 1560087544 7231 c3aa02a4dcef44938edef85e0ff4f371 "pdflatex"
+  "mainNotes.bib" 1560087544 103 48ad29797468f16e2853d8797278d7af "pdflatex"
   (generated)
   "main.blg"
   "main.bbl"
-["pdflatex"] 1560084899 "/Users/vaevictis/Desktop/GDL-project/report/main.tex" "/Users/vaevictis/Desktop/GDL-project/report/main.pdf" "main" 1560084902
-  "/Users/vaevictis/Desktop/GDL-project/report/main.aux" 1560084901 7117 bdbcb9e946664a0504dd7db93932aa63 ""
-  "/Users/vaevictis/Desktop/GDL-project/report/main.tex" 1560084899 14049 050471d70b5b57cedd5d5bab1d1edc58 ""
+["pdflatex"] 1560087543 "/Users/vaevictis/Desktop/GDL-project/report/main.tex" "/Users/vaevictis/Desktop/GDL-project/report/main.pdf" "main" 1560087551
+  "/Users/vaevictis/Desktop/GDL-project/report/main.aux" 1560087544 7231 c3aa02a4dcef44938edef85e0ff4f371 ""
+  "/Users/vaevictis/Desktop/GDL-project/report/main.tex" 1560087551 14121 214ef971210d7779b294f502ae5b86d9 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm" 1246382020 996 a18840b13b499c08ac2de96a99eda4bc ""
@@ -108,15 +109,15 @@
   "images/hm3d/bumps0.png" 1558968010 386620 65c5de2b2edcde4033685d94c325e900 ""
   "images/hm3d/bumps3.png" 1558968010 497189 5161e31e1c70ef178963904cf4844b11 ""
   "images/hm3d/holes1.png" 1558968010 774218 9d96e8516d695eb546aae8447a434666 ""
-  "main.aux" 1560084901 7117 bdbcb9e946664a0504dd7db93932aa63 "pdflatex"
-  "main.bbl" 1560084671 11553 8657965b5c2e5c5b66d5fdd3fe40b37f "bibtex main"
-  "main.out" 1560084901 1123 e0e0eab172b8dbd60e2841a0a3a8ff86 "pdflatex"
-  "main.tex" 1560084899 14049 050471d70b5b57cedd5d5bab1d1edc58 ""
+  "main.aux" 1560087544 7231 c3aa02a4dcef44938edef85e0ff4f371 "pdflatex"
+  "main.bbl" 1560087523 11985 e8b1c2d3734e54230aaaadbf52fe794c "bibtex main"
+  "main.out" 1560087544 1147 343f48f79958d344b87fcfe98ffc323b "pdflatex"
+  "main.tex" 1560087551 14121 214ef971210d7779b294f502ae5b86d9 ""
   (generated)
-  "/Users/vaevictis/Desktop/GDL-project/report/main.log"
+  "main.pdf"
   "main.aux"
   "/Users/vaevictis/Desktop/GDL-project/report/main.pdf"
-  "mainNotes.bib"
-  "main.pdf"
-  "main.log"
+  "/Users/vaevictis/Desktop/GDL-project/report/main.log"
   "main.out"
+  "mainNotes.bib"
+  "main.log"
