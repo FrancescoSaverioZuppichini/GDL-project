@@ -135,7 +135,6 @@ INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmitt10.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
-INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
 INPUT /Users/vaevictis/Desktop/GDL-project/report/images/DGCNN.png
 INPUT /Users/vaevictis/Desktop/GDL-project/report/images/DGCNN.png
 INPUT /Users/vaevictis/Desktop/GDL-project/report/images/DGCNN.png
@@ -164,6 +163,7 @@ INPUT /Users/vaevictis/Desktop/GDL-project/report/images/hm3d/bars1.png
 INPUT /Users/vaevictis/Desktop/GDL-project/report/images/hm3d/holes1.png
 INPUT /Users/vaevictis/Desktop/GDL-project/report/images/hm3d/holes1.png
 INPUT /Users/vaevictis/Desktop/GDL-project/report/images/hm3d/holes1.png
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
 INPUT /Users/vaevictis/Desktop/GDL-project/report/main.bbl
 INPUT /Users/vaevictis/Desktop/GDL-project/report/main.bbl
 INPUT /Users/vaevictis/Desktop/GDL-project/report/main.aux

@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{12}%
+\begin{thebibliography}{14}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -108,7 +108,7 @@
   {NoStop}%
 \bibitem [{\citenamefont {Qi}\ \emph {et~al.}(2017)\citenamefont {Qi},
   \citenamefont {Yi}, \citenamefont {Su},\ and\ \citenamefont
-  {Guibas}}]{1706.02413}%
+  {Guibas}}]{pointnet_plus}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~R.}\ \bibnamefont
   {Qi}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Yi}}, \bibinfo
@@ -183,4 +183,27 @@
   {Giusti}},\ }\href@noop {} {\enquote {\bibinfo {title} {Learning ground
   traversability from simulations},}\ } (\bibinfo {year} {2017})\BibitemShut
   {NoStop}%
+\bibitem [{\citenamefont {He}\ \emph {et~al.}(2015)\citenamefont {He},
+  \citenamefont {Zhang}, \citenamefont {Ren},\ and\ \citenamefont
+  {Sun}}]{he2015deep}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {He}}, \bibinfo {author} {\bibfnamefont {X.}~\bibnamefont {Zhang}}, \bibinfo
+  {author} {\bibfnamefont {S.}~\bibnamefont {Ren}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {J.}~\bibnamefont {Sun}},\ }\href@noop {} {\enquote {\bibinfo
+  {title} {Deep residual learning for image recognition},}\ } (\bibinfo {year}
+  {2015}),\ \Eprint {http://arxiv.org/abs/arXiv:1512.03385} {arXiv:1512.03385}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Deng}\ \emph {et~al.}(2009)\citenamefont {Deng},
+  \citenamefont {Dong}, \citenamefont {Socher}, \citenamefont {jia Li},
+  \citenamefont {Li},\ and\ \citenamefont {Fei-fei}}]{imagenet}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Deng}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Dong}}, \bibinfo
+  {author} {\bibfnamefont {R.}~\bibnamefont {Socher}}, \bibinfo {author}
+  {\bibfnamefont {L.}~\bibnamefont {jia Li}}, \bibinfo {author} {\bibfnamefont
+  {K.}~\bibnamefont {Li}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {L.}~\bibnamefont {Fei-fei}},\ }\href@noop {} {\enquote {\bibinfo {title}
+  {Imagenet: A large-scale hierarchical image database},}\ } (\bibinfo {year}
+  {2009})\BibitemShut {NoStop}%
 \end{thebibliography}%
