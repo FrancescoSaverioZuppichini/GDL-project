@@ -41,26 +41,30 @@
 \citation{ioffe2015batch}
 \citation{shapenet}
 \citation{shapenet}
-\citation{omar}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The two Dynamic Graph CNN architectures divided into an upper and lower branch for classification and segmentation respectively, image from the original paper \cite  {dgcnn}. In each edge conv, mlp$\{n_0, ..., n_{i}\}$ represents the number of output neurons of each dense layer. For example, in the first edge conv there are three dense layers with outputs size of $64$.\relax }}{2}{figure.caption.6}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig : DGCNN}{{1}{2}{The two Dynamic Graph CNN architectures divided into an upper and lower branch for classification and segmentation respectively, image from the original paper \cite {dgcnn}. In each edge conv, mlp$\{n_0, ..., n_{i}\}$ represents the number of output neurons of each dense layer. For example, in the first edge conv there are three dense layers with outputs size of $64$.\relax }{figure.caption.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {C}Similarties to other architectures}{2}{section*.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {II}Experiments}{2}{section*.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {A}Setup}{2}{section*.11}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {B}Mesh Classification}{2}{section*.12}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Some of the \emph  {chairs} CAD meshed in ModelNet40 \cite  {shapenet}.\relax }}{2}{figure.caption.13}\protected@file@percent }
-\newlabel{fig : modelnet}{{2}{2}{Some of the \emph {chairs} CAD meshed in ModelNet40 \cite {shapenet}.\relax }{figure.caption.13}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3}Final Architecture}{2}{section*.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {C}Similarties to other architectures}{2}{section*.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {II}Experiments}{2}{section*.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A}Setup}{2}{section*.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {B}Mesh Classification}{2}{section*.13}\protected@file@percent }
+\citation{omar}
 \citation{he2015deep}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Some of the \emph  {chairs} CAD meshed in ModelNet40 \cite  {shapenet}.\relax }}{3}{figure.caption.14}\protected@file@percent }
+\newlabel{fig : modelnet}{{2}{3}{Some of the \emph {chairs} CAD meshed in ModelNet40 \cite {shapenet}.\relax }{figure.caption.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C}Traversability Estimation}{3}{section*.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {III}Results}{3}{section*.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1}ModelNet40}{3}{section*.19}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Test accuracy score of the original DGCNN and ours implementation on the MonelNet40 dataset.\relax }}{3}{table.caption.20}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2}Traversability Estimation}{3}{section*.21}\protected@file@percent }
 \citation{imagenet}
-\@writefile{toc}{\contentsline {subsection}{\numberline {C}Traversability Estimation}{3}{section*.14}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {III}Results}{3}{section*.17}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1}ModelNet40}{3}{section*.18}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Test accuracy score of the original DGCNN and ours implementation on the MonelNet40 dataset.\relax }}{3}{table.caption.19}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2}Traversability Estimation}{3}{section*.20}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Test accuracy score of a ResNet variant and DGCNN on an images dataset composed of heightmaps for estimate traversability of a legged robot.\relax }}{3}{table.caption.21}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {IV}Discussion}{3}{section*.22}\protected@file@percent }
 \bibdata{mainNotes,bib}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Some of the thirty synthetic generated heightmaps, they include bumps, walls and holes. Those maps are loaded into the simulator and we store the robot interactions on them by let it walk forward for a certain amount of time.\relax }}{4}{figure.caption.17}\protected@file@percent }
+\newlabel{fig: hm}{{4}{4}{Some of the thirty synthetic generated heightmaps, they include bumps, walls and holes. Those maps are loaded into the simulator and we store the robot interactions on them by let it walk forward for a certain amount of time.\relax }{figure.caption.17}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Test accuracy score of a ResNet variant and DGCNN on an images dataset composed of heightmaps for estimate traversability of a legged robot.\relax }}{4}{table.caption.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Discussion}{4}{section*.23}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion}{4}{section*.24}\protected@file@percent }
 \bibcite{dgcnn}{{1}{2018}{{Wang\ \emph  {et~al.}}}{{Wang, Sun, Liu, Sarma, Bronstein,\ and\ Solomon}}}
 \bibcite{shapenet}{{2}{2015}{{Wu\ \emph  {et~al.}}}{{Wu, Song, Khosla, Yu, Zhang, Tang,\ and\ Xiao}}}
 \bibcite{cnn}{{3}{1989}{{LeCun\ \emph  {et~al.}}}{{LeCun, Boser, Denker, Henderson, Howard, Hubbard,\ and\ Jackel}}}
@@ -79,9 +83,6 @@
 \bibstyle{apsrev4-1}
 \citation{REVTEX41Control}
 \citation{apsrev41Control}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Some of the thirty synthetic generated heightmaps, they include bumps, walls and holes. Those maps are loaded into the simulator and we store the robot interactions on them by let it walk forward for a certain amount of time.\relax }}{4}{figure.caption.16}\protected@file@percent }
-\newlabel{fig: hm}{{4}{4}{Some of the thirty synthetic generated heightmaps, they include bumps, walls and holes. Those maps are loaded into the simulator and we store the robot interactions on them by let it walk forward for a certain amount of time.\relax }{figure.caption.16}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion}{4}{section*.23}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {}References}{4}{section*.24}\protected@file@percent }
-\newlabel{LastBibItem}{{15}{4}{}{section*.24}{}}
-\newlabel{LastPage}{{}{4}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {}References}{5}{section*.25}\protected@file@percent }
+\newlabel{LastBibItem}{{15}{5}{}{section*.25}{}}
+\newlabel{LastPage}{{}{5}{}{}{}}

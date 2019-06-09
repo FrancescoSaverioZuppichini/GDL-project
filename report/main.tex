@@ -16,15 +16,15 @@
 \author{Francesco Saverio Zuppichini}
 \affiliation{Universita della Svizzera Italiana (USI) \\ \texttt{zuppif@usi.ch}}
 \begin{abstract}
-  Recent deep learning breakthrough allows to effective classify and segment point clouds by converting them into graphs and feed them to \emph{Geometric Deep Learning} models. Point clouds are able to represent any shape in space making them one of the most versatile data-structure for non-euclidean data. The architecture that archives \emph{state of the art} results in both classify and segment those cloud is Dynamic Graph CNN \cite{dgcnn}. It utilizes a special Convolution operator applied directly on the graph's edge called \emph{EdgeConv} using both local and global information. The aim of this project is to first reproduce the results on the famous ModelNet40 \cite{shapenet} dataset with more than ten thousand meshed. Reproducing the paper's results ensure our architecture's correctness.
+  Recent deep learning breakthrough allows to effective classify and segment point clouds by converting them into graphs and feed them to \emph{Geometric Deep Learning} models. Point clouds are able to represent any shape in space making them one of the most versatile data-structure for non-euclidean data. The architecture that archives \emph{state of the art} results in both classification and segmentation on point clouds is Dynamic Graph CNN \cite{dgcnn}. It utilizes a special Convolution operator applied directly on the graph's edge called \emph{EdgeConv} using both local and global information. The aim of this project is to first reproduce the results on the famous ModelNet40 \cite{shapenet} dataset with more than ten thousand meshed to ensure our implementaion's correctness.
   Then, we test DGCNN against a vanilla CNN on a dataset composed by heightmaps labeled as traversable or not traversable. Heightmaps are gray images where each pixel is the height value of a terrain region. They were generated letting a legged crocodile-like robot, \emph{Krock}, to walk into a simulated environment on synthetic maps and cropping the corresponding terrain patch around each stored pose trajectory. This dataset represents a really interesting playground to explore which architecture is able to extract the most information from the geometry of the terrain and correctly predict their traversability. 
 \end{abstract}
 \maketitle
 \section{Introduction}
 
-Graphs can express a wide array of data structures using a set of nodes and the relationship between them, edges. Graphs are non-euclidean data, thus standard deep learning methods, like CNN \cite{cnn}, fails. Recently, a new set of machine learning models, \emph{Graph Deep Learning} have flourished and successfully applied on a wide array of graphs structure such as social networks, proteins, and on point clouds. A Point cloud is a set of data points in space that often represents a specific 3D object by defining its points coordinates. They are extremely flexible and can be easily gather using consumer hardware such as a Kinect or a Lidar. Even if they are not graphs by definition, we can easily convert them connecting to each point to each of its $k$ neighbors.
+Graphs can express a wide array of data structures using a set of nodes and the relationship between them, edges. Graphs are non-euclidean data, thus standard deep learning methods, like CNN \cite{cnn}, fails. Recently, a new set of machine learning models, \emph{Graph Deep Learning} have flourished and successfully applied on a wide array of graphs structure such as social networks, proteins, and on point clouds. A Point cloud is a set of data points in space that often represents a specific 3D object by defining its points coordinates. Even if they are not graphs by definition, we can easily convert them connecting to each point to each of its $k$ neighbors.
 
-As with images, we are interested in classify and segment those point clouds. The current architecture that achieves the \emph{state of the art} in those tasks is \emph{Dynamic Graph CNN}(DGCNN) proposed by Wang et al. \cite{dgcnn}. It utilizes a special convolution layer,  \emph{EdgeConv}, that directly extract features and aggregate the points by using both global and local information. During the description of the proposed module, we will overview other recent similar approaches by comparing with DGCNN.
+As with images, we are interested in classification, label a point cloud, and segmentation, label each point in the cloud. The current architecture that achieves the \emph{state of the art} in those tasks is \emph{Dynamic Graph CNN}(DGCNN) proposed by Wang et al. \cite{dgcnn}. It utilizes a special convolution layer,  \emph{EdgeConv}, that directly extract features and aggregate the points by using both global and local information. During the description of the proposed module, we will overview other recent similar approaches by comparing them with DGCNN.
 
 This project will focus on explaining, test and evaluate this architecture. First, we will reproduce the results of the original paper on the classification task. Then to test its effectiveness on predicting traversability estimation using ground's patches for a legged robot by comparing it to a classic CNN approach. The discussion will only scrape the surface of the topic and will not treat in detail other architectures. If interested, we suggest to the reader the review by Zhou et al. \cite{1812.08434}.
 \subsection{Method}
@@ -50,6 +50,9 @@ The authors shows that dynamically recompute the graph using k-nearest neighbors
   x_{i}^{(l+1)}=\square_{j :(i, j) \in \mathcal{E}^{(l)}} h_{\Theta}^{(l)}\left(x_{i}^{(l)}, x_{j}^{(l)}\right)
 \end{equation}
 where $\square$ and $h_{\Theta}$ are the same used in the vanilla EdgeConv layer.
+
+\subsubsection{Final Architecture}
+Figure \ref{fig : DGCNN} shows the two final architectures, up and lower branch, used for classification and segmentation respectively. The first utilises two EdgeConv and four feedforward networks to learn the features-label mapping. While, the second, have one more EdgeConv module and skipped connections between the last blocks. 
 \subsection{Similarties to other architectures}
 % Interesting if we take an image and we convert into a graph where each node has the pixel value and there is a local connectivity between them. Then the EdgeConv becomes the classic convolution:
 
@@ -121,25 +124,25 @@ The following table shows the result of the ModelNet40 dataset comparing the ori
 \end{table}
 Pretrained weights can be downloaded \href{https://drive.google.com/open?id=1aCXGmsI3N9zbwOfm-yTqOYpMf1uTXi3Q}{here}.
 \subsubsection{Traversability Estimation}
-We compared the performance of DGCNN against a ResNet \cite{he2015deep} variant on an images dataset for traversability estimation. We set $k=6$ and the learning rate to $0.0010$, the other set of hyperparameters was kept the same as with ModelNet40.
+We compared the performance of DGCNN against a ResNet \cite{he2015deep} variant on an images dataset for traversability estimation. We set $k=6$ and the learning rate to $0.0001$, the other set of hyperparameters was kept the same as with ModelNet40.
 \begin{table}[H]
   \centering
   \begin{tabular}{lcc}
     & ACCURACY \\
     \hline
     MicroResnet & $88.2$\%  \\
-    \textbf{DGCNN} & $83.3$\%  \\
+    \textbf{DGCNN} & $83.4$\%  \\
     \hline
   \end{tabular}
   \caption{Test accuracy score of a ResNet variant and DGCNN on an images dataset composed of heightmaps for estimate traversability of a legged robot.}
 \end{table}
 Our CNN has only $314,282$ parameters with a forward time of $2.41MB$.
 \section{Discussion}
-Dynamic Graph CNN is a quite elegant architecture to both classify and segment point cloud. We find it to be very stable during training, similar to CNN . Moreover, it can be easily customizable by changing the size of the EdgeConv and stacking more layers allowing to engineer different models for different tasks.
+Dynamic Graph CNN is a quite elegant architecture to both classify and segment point clouds. We find it to be very stable during training, similar to CNN . Moreover, it can be easily customizable by changing the size of the EdgeConv and stacking more layers allowing to engineer different models for different tasks.
 
 During our experiments, we also half of the dense layer that maps the features extracted by the two EdgeConv to a bigger space to see how performance will change by bottlenecking the architecture. Surprisingly, the training was very stable and the model's accuracy scored over $90\%$. 
 
-We also train DGCNN on our Master Thesis's dataset composed of images that represent heightmaps. As expected, CNN had a better score and is able to save more memory. However, the DGCNN architecture not parameters hungry and it has a size comparable to a classic ResNet18 used on classic computer vision dataset such as ImageNet \cite{imagenet}. Obviously, it shines on non-euclidean data like point clouds while on images a classic CNN is a better option. 
+We also train DGCNN on our Master Thesis's dataset composed of images that represent heightmaps. As expected, CNN had a better score and is able to save more memory. However, the DGCNN architecture is not parameters hungry and it has a size comparable to a classic ResNet18 used on classic computer vision dataset such as ImageNet \cite{imagenet} making it both light and scalable. Obviously, it shines on non-euclidean data like point clouds while on images a classic CNN is a better option. 
 
 \section{Conclusion}
 We successfully reproduced the results of the original on the MonelNet40 reimplemmenting DGCNN entirely in PyTorch. Then, we playing with the architecture by reducing the dimension of the dense layer in charge to map the features from the EdgeConv in a higer dimensional space. Last, we test the architecture against a classic CNN on a dataset composed by heightmap to predict the traversability of the robot. As expected, the CNN outperforms DGCNN but the last was still able to reach decent performance in a reasonable time.
